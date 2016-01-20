@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Xin 2 Mobile Arch</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- ios compatible -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <link rel="apple-touch-icon" href="img/xin-logo.png">
+
+  <!-- ms compatible -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval';
+    script-src 'self' http://www.parsecdn.com 'unsafe-inline';
+    connect-src 'self' https://api.parse.com ws://*:3000;
+    style-src 'self' 'unsafe-inline';
+    media-src *"> -->
+
+
+  <script type="text/javascript">
+    window.XIN_DEBUG = true;
+  </script>
+
+  <link rel="stylesheet" href="./bower_components/jacket-awesome/dist/css/jacket-awesome.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript" src="./bower_components/xin/js/polyfills.js"></script>
+  <script type="text/javascript" src="./bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+  <!-- TODO: must be imported before instantiate -->
+  <link rel="import" href="./bower_components/xin/xin.html">
+
+  <link rel="import" href="./bower_components/xin/xin-app.html">
+  <link rel="import" href="./bower_components/xin/xin-pager.html">
+  <link rel="import" href="./bower_components/xin/xin-view.html">
+
+  <link rel="import" href="./bower_components/xin-naked/naked-drawer.html">
+  <link rel="import" href="./bower_components/xin-naked/naked-navbar.html">
+
+  <link rel="import" href="bower_components/xin-lux/lux-fastclick.html">
+
+  <link rel="import" href="./components/app-login-view.html">
+  <link rel="import" href="./components/app-view.html">
+</head>
+<body>
+
+<lux-fastclick></lux-fastclick>
+
+<xin-app id="app">
+  <template>
+    <naked-drawer id="drawer">
+      <div class="layout">
+        <naked-navbar>
+          <h6 class="label">Menu</h6>
+        </naked-navbar>
+
+        <ul class="listview flex">
+          <li class="list-group-container">
+            <!-- <h5>Group Title</h5> -->
+            <ul class="list-group">
+              <li><a href="#!/home" close><i class="xn-layout"></i> Home <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#!/list" close><i class="xn-layout"></i> List <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#!/form" close><i class="xn-layout"></i> Form <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#!/masonry" close><i class="xn-layout"></i> Masonry <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#!/tabs" close><i class="xn-layout"></i> Tabs <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#!/tabstrip" close><i class="xn-layout"></i> Tabstrip <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#!/with-param/FooBar" close><i class="xn-layout"></i> With Parameter <i class="xn xn-right-open-big"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="listview">
+          <li class="list-group-container">
+            <ul class="list-group tail">
+              <li><a href="#!/" close><i class="xn-layout"></i> Logout <i class="xn xn-right-open-big"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </naked-drawer>
+
+    <xin-pager>
+      <app-login-view uri="/" class="with-background"></app-login-view>
+
+      <app-view uri="/home" title="Application">
+        <h2>Example Paragraph</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+      </app-view>
+
+      <app-view uri="/list" title="List">
+        <ul class="listview bordered">
+          <li class="list-group-container">
+            <h5>Group Title</h5>
+            <ul class="list-group">
+              <li class="plain"><a href="#">Menu 1</a></li>
+              <li class="plain"><a href="#">Menu 2</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tellus vel lacus ullamcorper elementum. <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#">Duis mollis, urna bibendum tincidunt blandit <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#">Sed tristique arcu vitae arcu blandit, nec vulputate dui sagittis. Etiam tincidunt turpis ullamcorper <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#">Proin ut nulla placerat, gravida nunc id, suscipit arcu. Morbi sit amet enim eu sapien feugiat malesuada id sit amet lacus. <i class="xn xn-right-open-big"></i></a></li>
+            </ul>
+          </li>
+          <li class="list-group-container">
+            <h5>Group Title</h5>
+            <ul class="list-group">
+              <li><a class="swipe-toggle" href="#">Network <input class="swipe" type="checkbox" checked=""></a></li>
+              <li><a href="#">Line <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#">Song <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#">Videos <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#">Photos <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#">Applications <i class="xn xn-right-open-big"></i></a></li>
+              <li><a href="#">Capacity <i class="xn xn-right-open-big"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+      </app-view>
+
+      <app-view uri="/form" title="Form">
+        <form>
+          <fieldset>
+            <legend>Fieldset</legend>
+            <div class="row">
+              <label>Input Label</label>
+              <input type="text" placeholder="Input">
+            </div>
+            <div class="row">
+              <div class="span-4">
+                <label>Input Label</label>
+                <input type="text" placeholder="Input">
+              </div>
+              <div class="span-4">
+                <label>Input Label</label>
+                <select>
+                  <option>Options #1</option>
+                  <option>Options #2</option>
+                  <option>Options #3</option>
+                </select>
+              </div>
+              <div class="span-4">
+                <label>Input Label</label>
+                <input type="text" value="This is read-only" disabled="">
+              </div>
+            </div>
+            <div class="row">
+              <label>Textarea Label</label>
+              <textarea placeholder="textarea"></textarea>
+            </div>
+            <div class="row">
+              <div class="pull-left">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+              </div>
+              <div class="pull-right">
+                <a href="#" class="button disable">Back</a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </app-view>
+
+      <app-view uri="/masonry" title="Masonry">
+      </app-view>
+
+      <app-view uri="/tabs" title="Tabs">
+      </app-view>
+
+      <app-view uri="/tree" title="Tree">
+        <ul class="tree">
+          <li>
+              <input type="checkbox" data-id-save="tree1"><a href="#">Tree node #1</a>
+              <ul>
+                  <li><a href="#">Tree subnode #1.1</a></li>
+                  <li><a href="#">Tree subnode #1.2</a></li>
+                  <li><a href="#">Tree subnode #1.3</a></li>
+                  <li>
+                      <input type="checkbox" data-id-save="tree2"> <a href="#">Tree node inner #1</a>
+                      <ul>
+                          <li><a href="#">Tree subnode inner #1.1</a></li>
+                          <li><a href="#">Tree subnode inner #1.2</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Tree subnode #1.4</a></li>
+                  <li><a href="#">Tree subnode #1.5</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Tree node #1</a></li>
+          <li><a href="#">Tree node #2</a></li>
+          <li><a href="#">Tree node #3</a></li>
+        </ul>
+
+        <tabstrip>
+          <div class="row">
+            <a class="tabspan-3 tabs active" href="#!/tree">
+              <i class="xn xn-star"></i>
+              <span>Tree</span>
+            </a>
+            <a class="tabspan-3 tabs" href="#!/tabstrip">
+              <i class="xn xn-user"></i>
+              <span>Typography</span>
+            </a>
+            <a class="tabspan-3 tabs" href="#!/grid">
+              <span class="badge solid round error">5</span>
+              <i class="xn xn-search"></i>
+              <span>Grid</span>
+            </a>
+          </div>
+        </tabstrip>
+      </app-view>
+
+      <app-view uri="/tabstrip" title="Tabstrip">
+        <h1>h1. Very large heading.</h1>
+        <h2>h2. Large heading.</h2>
+        <h3>h3. Medium heading.</h3>
+        <h4>h4. Moderate heading.</h4>
+        <h5>h5. Small heading.</h5>
+        <h6>h6. Tiny heading.</h6>
+
+        <tabstrip>
+          <div class="row">
+            <a class="tabspan-3 tabs" href="#!/tree">
+              <i class="xn xn-star"></i>
+              <span>Tree</span>
+            </a>
+            <a class="tabspan-3 tabs active" href="#!/tabstrip">
+              <i class="xn xn-user"></i>
+              <span>Typography</span>
+            </a>
+            <a class="tabspan-3 tabs" href="#!/grid">
+              <span class="badge solid round error">5</span>
+              <i class="xn xn-search"></i>
+              <span>Grid</span>
+            </a>
+          </div>
+        </tabstrip>
+      </app-view>
+
+      <app-view uri="/grid" title="Grid">
+        <div class="gridMenu row">
+          <a href="#" class="span-3">
+            <span class="image" style="background: url(img/xin2.png) center no-repeat; background-size: contain;"></span>
+            <span class="name">All Product</span>
+          </a>
+          <a href="#" class="span-3">
+            <span class="image" style="background: url(img/xinix2.png) center no-repeat; background-size: contain;"></span>
+            <span class="name">All Categories</span>
+          </a>
+          <a href="#" class="span-3">
+            <span class="image" style="background: url(img/xin2.png) center no-repeat; background-size: contain;"></span>
+            <span class="name">Clothings</span>
+          </a>
+          <a href="#" class="span-3">
+            <span class="image" style="background: url(img/xinix2.png) center no-repeat; background-size: contain;"></span>
+            <span class="name">Electronics</span>
+          </a>
+        </div>
+
+        <tabstrip>
+          <div class="row">
+            <a class="tabspan-3 tabs" href="#!/tree">
+              <i class="xn xn-star"></i>
+              <span>Tree</span>
+            </a>
+            <a class="tabspan-3 tabs" href="#!/tabstrip">
+              <i class="xn xn-user"></i>
+              <span>Typography</span>
+            </a>
+            <a class="tabspan-3 tabs active" href="#!/grid">
+              <span class="badge solid round error">5</span>
+              <i class="xn xn-search"></i>
+              <span>Grid</span>
+            </a>
+          </div>
+        </tabstrip>
+      </app-view>
+
+      <xin-view uri="/with-param/:param">
+        <template>
+          <div class="layout">
+            <naked-navbar>
+              <div class="span-2">
+                <a href="#!/home" class="direct">
+                  <i class="xn xn-left-open-big"></i>
+                </a>
+              </div>
+              <div class="span-8">
+                <h6 class="label">{{parameters.param}}</h6>
+              </div>
+              <div class="span-2">
+
+              </div>
+            </naked-navbar>
+
+            <div class="container flex scroll">
+              <h2>Example Paragraph</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </template>
+      </xin-view>
+    </xin-pager>
+  </template>
+</xin-app>
+
+</body>
+</html>

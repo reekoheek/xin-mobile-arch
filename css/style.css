@@ -1,0 +1,193 @@
+.button.solid, input[type="submit"].button {
+  background: #2087fc;
+  border: 0;
+  padding: 10px 16px;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 130%;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+xin-pager {
+  display: block;
+  height: 100%;
+}
+
+.with-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  background: url(../img/background.jpg) center no-repeat;
+  background-size: cover;
+}
+
+span.direct {
+    font-size: 1.2em;
+    padding: 0;
+    color: #2087fc;
+    line-height: 23px;
+    font-weight: 600;
+    padding: 10px 0 10px 10px;
+    display: block;
+}
+
+.direct.close span {
+    display: table;
+    width: 20px;
+    height: 20px;
+    background: url(../img/close.png)center no-repeat;
+    background-size: contain;
+}
+
+.listView {
+    background: rgba(61, 50, 50, 0.3);
+    border-color: rgba(61, 44, 44, 0.5);
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.loginArea {
+  position: absolute;
+  top: 33%;
+  left: 15px;
+  right: 15px;
+  text-align: center;
+  margin-top: -98px;
+}
+
+.loginArea .logo {
+  display: inline-block;
+  background: url(../img/xinix.png)center no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+}
+
+.loginArea h4 {
+  color: #eee;
+  margin: 0;
+  font-size: 1.3em;
+  line-height: 120%;
+}
+
+.menuButtom {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  right: 15px;
+}
+
+.menuButtom .socialSubmit {
+  margin-bottom: 40px;
+}
+
+.socialSubmit a i {
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+.socialSubmit a.button {
+  border: 0;
+  text-transform: none;
+}
+
+.socialSubmit a:last-child {
+  margin-top: 10px;
+}
+
+.socialSubmit .fb {
+  background: #3A5898;
+}
+
+.submitPost .buttonSubmit input[type="submit"], .socialSubmit input[type="submit"], .socialSubmit button, .socialSubmit .button {
+  padding: 10px 16px;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 130%;
+}
+
+.wording {
+  text-align: center;
+  color: #eee;
+  margin: 0;
+  font-size: 1.05em;
+}
+
+.wording a {
+  color: #fff;
+}
+
+.gridMenu {
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.gridMenu a {
+  padding: 5px;
+  border-right: 1px solid #ddd;
+  display: block;
+}
+
+.gridMenu .image {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.gridMenu .name {
+  font-size: 0.8em;
+  color: #666;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.layout {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+}
+
+.layout .flex {
+  flex: 1;
+  -webkit-flex: 1;
+  -webkit-box-flex: 1;
+}
+
+.layout .container {
+  padding: 15px;
+}
+
+.scroll {
+  overflow: auto;
+}
+
+.listview .list-group.tail {
+  margin: 0;
+}
+
+.listview.bordered {
+  border: 1px solid #EFEFEF;
+  border-radius: 10px;
+}

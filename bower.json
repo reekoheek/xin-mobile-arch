@@ -1,0 +1,25 @@
+{
+  "name": "xin-web-arch",
+  "authors": [
+    "Ganesha <reekoheek@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "xin": "xinix-technology/xin#~2.1.0",
+    "xin-naked": "xinix-technology/xin-naked#~2.1.0",
+    "webcomponentsjs": "~0.7.20",
+    "jacket-awesome": "~2.0.0",
+    "xin-lux": "xinix-technology/xin-lux#master"
+  }
+}

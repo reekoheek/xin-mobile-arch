@@ -1,0 +1,50 @@
+<link rel="import" href="../bower_components/xin/view-behavior.html">
+
+<template is="xin-template" for="app-view">
+  <div class="layout">
+    <naked-navbar>
+      <div class="span-2">
+        <a href="#!/" class="direct" on-click="toggleDrawer">
+          <i class="xn xn-menu"></i>
+        </a>
+      </div>
+      <div class="span-8">
+        <h6 class="label">[[title]]</h6>
+      </div>
+      <div class="span-2">
+
+      </div>
+    </naked-navbar>
+
+    <div class="container flex scroll">
+      <content></content>
+    </div>
+
+  </div>
+</template>
+
+<script>
+(function(root) {
+  'use strict';
+
+  xin.Component({
+    is: 'app-view',
+
+    properties: {
+      title: {
+        type: String,
+        value: 'Page',
+      }
+    },
+
+    behaviors: [xin.ViewBehavior],
+
+    toggleDrawer: function(evt) {
+      evt.preventDefault();
+
+      drawer.toggle();
+    },
+  });
+
+})(this);
+</script>

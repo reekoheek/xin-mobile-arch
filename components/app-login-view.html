@@ -1,0 +1,36 @@
+<link rel="import" href="../bower_components/xin/view-behavior.html">
+<template is="xin-template" for="app-login-view">
+  <div class="loginArea">
+    <div class="logo"></div>
+    <h4>
+      This is your </br>
+      Application <span on-click="$back">Description</span>
+    </h4>
+  </div>
+  <div class="menuButtom">
+    <div class="socialSubmit">
+      <a href="#!/home" class="button solid">
+        <i class="xn xn-key"></i>
+        <span>Login</span>
+      </a>
+    </div>
+    <h6 class="wording">Already have an account? <a href="#login-input"><strong>Log in now!</strong></a></h6>
+  </div>
+</template>
+
+<script>
+(function(root) {
+  'use strict';
+
+  xin.Component({
+    is: 'app-login-view',
+
+    behaviors: [xin.ViewBehavior],
+
+    foo: function() {
+      alert('ddd');
+    }
+  });
+
+})(this);
+</script>
