@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "xin": "xinix-technology/xin#~2.1.0",
-    "xin-naked": "xinix-technology/xin-naked#~2.1.0",
+    "xin-naked": "reekoheek/xin-naked#~2.1.0",
     "webcomponentsjs": "~0.7.20",
     "jacket-awesome": "~2.0.0",
     "xin-lux": "xinix-technology/xin-lux#master"
