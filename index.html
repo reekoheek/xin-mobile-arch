@@ -304,7 +304,7 @@
         </tabstrip>
       </app-view>
 
-      <xin-view uri="/with-param/:param">
+      <xin-view uri="/with-param/:name">
         <template>
           <div class="layout">
             <naked-navbar>
@@ -314,7 +314,7 @@
                 </a>
               </div>
               <div class="span-8">
-                <h6 class="label">{{parameters.param}}</h6>
+                <h6 class="label">{{parameters.name}}</h6>
               </div>
               <div class="span-2">
 
@@ -350,6 +350,14 @@
               </p>
             </div>
           </div>
+        </template>
+      </xin-view>
+
+      <xin-view uri="/repeat/:id" id="anu">
+        <template>
+          <template is="xin-repeat" items="{{list}}">
+            <span>{{item.name}}</span>
+          </template>
         </template>
       </xin-view>
     </xin-pager>
