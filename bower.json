@@ -16,8 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "xin": "xinix-technology/xin#~2.1.0",
-    "xin-naked": "reekoheek/xin-naked#~2.1.0",
+    "xin": "xinix-technology/xin#ver-2.x",
+    "xin-naked": "reekoheek/xin-naked#master",
     "webcomponentsjs": "~0.7.20",
     "jacket-awesome": "~2.0.0",
     "xin-lux": "xinix-technology/xin-lux#master"

@@ -47,6 +47,7 @@
     box-sizing: border-box;
     display: block;
     position: relative;
+    overflow: hidden;
   }
 
   /*xin-pager /deep/ .xin-view-behavior,*/
@@ -600,7 +601,7 @@
         </tabstrip>
       </app-view>
 
-      <xin-view uri="/with-param/:param">
+      <xin-view uri="/with-param/:name">
         <template>
           <div class="layout">
             <naked-navbar>
@@ -610,7 +611,7 @@
                 </a>
               </div>
               <div class="span-8">
-                <h6 class="label">{{parameters.param}}</h6>
+                <h6 class="label">{{parameters.name}}</h6>
               </div>
               <div class="span-2">
 
@@ -645,6 +646,16 @@
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
+          </div>
+        </template>
+      </xin-view>
+
+      <xin-view uri="/repeat/:id" id="anu">
+        <template>
+          <div>
+            <template is="xin-repeat" items="{{list}}">
+              <span>{{item.name}}</span>
+            </template>
           </div>
         </template>
       </xin-view>

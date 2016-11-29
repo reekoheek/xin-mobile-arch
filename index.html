@@ -355,9 +355,11 @@
 
       <xin-view uri="/repeat/:id" id="anu">
         <template>
-          <template is="xin-repeat" items="{{list}}">
-            <span>{{item.name}}</span>
-          </template>
+          <div>
+            <template is="xin-repeat" items="{{list}}">
+              <span>{{item.name}}</span>
+            </template>
+          </div>
         </template>
       </xin-view>
     </xin-pager>
